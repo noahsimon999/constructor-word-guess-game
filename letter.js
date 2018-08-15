@@ -4,12 +4,12 @@ var inquirer = require("inquirer");
 
 var Space = function(letter) {
     this.character = letter;
-    this.guessed = true;
+    this.guessed = false;
     this.render = function() {
         if (this.guessed === true) {
-            console.log(letter);
+            return letter;
         } else {
-            console.log("_")
+            return "_";
         }
     }; 
     this.check = function() {
