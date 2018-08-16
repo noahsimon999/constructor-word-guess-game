@@ -35,3 +35,5 @@ var Word = function (wordToGuess) {
 // var abc = new Word ("Noah")
 
 // console.log(abc.wordGuess("N"));
+
+module.exports = Word;
