@@ -19,10 +19,19 @@ var Word = function (wordToGuess) {
         // logs the blank array, but cannot log the console.logs from letter.js
         console.log(blankArray);
     };
+    this.wordGuess = function(character) {
+        var stringToArray = Array.from(wordToGuess);
+        console.log(stringToArray);
+        for (let i = 0; i < stringToArray.length; i++) {
+            var blankOrLetter = new letter(stringToArray[i]);
+            blankOrLetter.check(character);
+            console.log(blankOrLetter.character);
+        }
+    }
 };
 
 
 
-var abc = new Word ("Noah")
+// var abc = new Word ("Noah")
 
-console.log(abc.stringIt());
+// console.log(abc.wordGuess("N"));
